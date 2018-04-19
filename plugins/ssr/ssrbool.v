@@ -1207,7 +1207,6 @@ Lemma sub_refl T (p : mem_pred T) : sub_mem p p. Proof. by []. Qed.
 Arguments sub_refl {T p}.
 
 Notation "x \in A" := (in_mem x (mem A)) : bool_scope.
-Notation "x \in A" := (in_mem x (mem A)) : bool_scope.
 Notation "x \notin A" := (~~ (x \in A)) : bool_scope.
 Notation "A =i B" := (eq_mem (mem A) (mem B)) : type_scope.
 Notation "{ 'subset' A <= B }" := (sub_mem (mem A) (mem B))
