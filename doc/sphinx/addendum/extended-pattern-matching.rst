@@ -54,7 +54,7 @@ given after the keyword ``return``. Given a pattern matching expression,
 if all the right-hand-sides of ``=>`` have the same
 type, then this type can be sometimes synthesized, and so we can omit
 the return part. Otherwise the predicate after return has to be
-provided, like for the basicmatch.
+provided, like for the basic match.
 
 Let us illustrate through examples the different aspects of extended
 pattern matching. Consider for example the function that computes the
@@ -427,7 +427,7 @@ be more complicated patterns than a variable.
 
 Moreover, constructors whose type do not follow the same pattern will
 become impossible branches. In an impossible branch, you can answer
-anything but False_rect unit has the advantage to be subterm of
+anything but :g:`False_rect unit` has the advantage to be subterm of
 anything.
 
 To be concrete: the ``tail`` function can be written:
