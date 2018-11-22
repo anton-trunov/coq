@@ -812,23 +812,21 @@ Proof. by case b1; case b2; constructor; auto. Qed.
 
 End ReflectConnectives.
 
-Arguments idP [b1].
-Arguments idPn [b1].
-Arguments negP [b1].
-Arguments negPn [b1].
-Arguments negPf [b1].
-Arguments andP [b1 b2].
-Arguments and3P [b1 b2 b3].
-Arguments and4P [b1 b2 b3 b4].
-Arguments and5P [b1 b2 b3 b4 b5].
-Arguments orP [b1 b2].
-Arguments or3P [b1 b2 b3].
-Arguments or4P [b1 b2 b3 b4].
-Arguments nandP [b1 b2].
-Arguments norP [b1 b2].
-Arguments implyP [b1 b2].
-Prenex Implicits idP idPn negP negPn negPf.
-Prenex Implicits andP and3P and4P and5P orP or3P or4P nandP norP implyP.
+Arguments idP {b1}.
+Arguments idPn {b1}.
+Arguments negP {b1}.
+Arguments negPn {b1}.
+Arguments negPf {b1}.
+Arguments andP {b1 b2}.
+Arguments and3P {b1 b2 b3}.
+Arguments and4P {b1 b2 b3 b4}.
+Arguments and5P {b1 b2 b3 b4 b5}.
+Arguments orP {b1 b2}.
+Arguments or3P {b1 b2 b3}.
+Arguments or4P {b1 b2 b3 b4}.
+Arguments nandP {b1 b2}.
+Arguments norP {b1 b2}.
+Arguments implyP {b1 b2}.
 
 (**  Shorter, more systematic names for the boolean connectives laws.        **)
 
@@ -952,7 +950,7 @@ Proof. by case: a; case: b. Qed.
 
 Lemma addbP a b : reflect (~~ a = b) (a (+) b).
 Proof. by case: a; case: b; constructor. Qed.
-Arguments addbP [a b].
+Arguments addbP {a b}.
 
 (**
  Resolution tactic for blindly weeding out common terms from boolean
@@ -1155,9 +1153,9 @@ Definition clone_pred U :=
 
 End Predicates.
 
-Arguments pred0 [T].
-Arguments predT [T].
-Prenex Implicits pred0 predT predI predU predC predD preim relU.
+Arguments pred0 {T}.
+Arguments predT {T}.
+Prenex Implicits predI predU predC predD preim relU.
 
 Notation "[ 'pred' : T | E ]" := (SimplPred (fun _ : T => E%B))
   (at level 0, format "[ 'pred' :  T  |  E ]") : fun_scope.

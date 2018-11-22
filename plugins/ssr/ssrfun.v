@@ -465,9 +465,9 @@ Definition Tagged2 x y := @existT2 I [eta T_] [eta U_] i x y.
 
 End Tag.
 
-Arguments Tagged [I i].
-Arguments Tagged2 [I i].
-Prenex Implicits tag tagged Tagged tag2 tagged2 tagged2' Tagged2.
+Arguments Tagged {I i}.
+Arguments Tagged2 {I i}.
+Prenex Implicits tag tagged tag2 tagged2 tagged2'.
 
 Coercion tag_of_tag2 I T_ U_ (w : @sigT2 I T_ U_) :=
   Tagged (fun i => T_ i * U_ i)%type (tagged2 w, tagged2' w).
